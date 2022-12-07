@@ -1,4 +1,4 @@
-﻿namespace MKIdentityServer.Models
+﻿namespace MKIdentityServer.Identity.Models
 {
     public class AuthDto
     {

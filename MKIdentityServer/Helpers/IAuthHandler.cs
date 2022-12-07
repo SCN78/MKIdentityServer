@@ -1,5 +1,5 @@
 ﻿using Google.Apis.Auth;
-using MKIdentityServer.Models;
+using MKIdentityServer.Identity.Models;
 using MKIdentityServer.Temp;
 
 namespace MKIdentityServer.Helpers

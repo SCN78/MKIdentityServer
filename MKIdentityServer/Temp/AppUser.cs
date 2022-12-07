@@ -1,4 +1,6 @@
-﻿namespace MKIdentityServer.Temp
+﻿using MKIdentityServer.Identity.Models;
+
+namespace MKIdentityServer.Temp
 {
     public class AppUser
     {

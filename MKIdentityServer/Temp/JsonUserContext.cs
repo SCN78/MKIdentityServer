@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MKIdentityServer.Identity.Models;
+using Newtonsoft.Json;
 using System.Security.Cryptography;
 
 namespace MKIdentityServer.Temp

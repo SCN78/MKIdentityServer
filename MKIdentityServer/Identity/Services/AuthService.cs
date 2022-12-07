@@ -1,8 +1,6 @@
 ﻿using MKIdentityServer.Context;
 using MKIdentityServer.Identity.Helpers;
 using MKIdentityServer.Identity.Models;
-using MKIdentityServer.Models;
-using MKIdentityServer.Temp;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 

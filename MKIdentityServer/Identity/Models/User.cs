@@ -1,5 +1,4 @@
-﻿using MKIdentityServer.Temp;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 
 namespace MKIdentityServer.Identity.Models
 {

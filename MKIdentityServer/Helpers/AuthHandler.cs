@@ -1,6 +1,6 @@
 ﻿using Google.Apis.Auth;
 using Microsoft.AspNetCore.Authentication.OAuth;
-using MKIdentityServer.Models;
+using MKIdentityServer.Identity.Models;
 using MKIdentityServer.Temp;
 using Newtonsoft.Json;
 using System.IO;

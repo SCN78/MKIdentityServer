@@ -1,5 +1,4 @@
 ﻿using MKIdentityServer.Identity.Models;
-using MKIdentityServer.Models;
 
 
 namespace MKIdentityServer.Identity.Services

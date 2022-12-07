@@ -7,8 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Temp\IUserContext.cs" />
-    <Compile Remove="Temp\UserContext.cs" />
+    <Compile Remove="Temp\**" />
+    <Content Remove="Temp\**" />
+    <EmbeddedResource Remove="Temp\**" />
+    <None Remove="Temp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Helpers\AuthHandler.cs" />
+    <Compile Remove="Helpers\IAuthHandler.cs" />
+    <Compile Remove="Helpers\TokenHandler.cs" />
+    <Compile Remove="Models\ExternalAuthDto.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

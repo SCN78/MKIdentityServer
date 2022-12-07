@@ -1,4 +1,4 @@
-﻿namespace MKIdentityServer.Temp
+﻿namespace MKIdentityServer.Identity.Models
 {
     public enum UserRoles
     {

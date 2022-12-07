@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MKIdentityServer.Helpers;
+using MKIdentityServer.Identity.Models;
 using MKIdentityServer.Identity.Services;
-using MKIdentityServer.Models;
 
 namespace MKIdentityServer.Controllers
 {
