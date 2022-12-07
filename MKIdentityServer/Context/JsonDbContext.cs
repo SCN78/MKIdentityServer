@@ -124,6 +124,16 @@ namespace MKIdentityServer.Context
             return GetAllUsers().Where(x => x.UserId == userId).FirstOrDefault();
         }
 
+        public User? GetUserByToken(string token)
+        {
+            var authUser = GetAllAuths().Where(t => t.AccessToken == token).FirstOrDefault();
+            if(authUser != null)
+            {
+                return GetAllUsers().Where(u => u.UserId == authUser.UserId).FirstOrDefault();
+            }
+            return null;
+        }
+
         public void UpdateUser(User user)
         {
             AddUser(user);

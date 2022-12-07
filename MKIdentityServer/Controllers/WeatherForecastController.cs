@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MKIdentityServer.Identity.Helpers;
+using MKIdentityServer.Identity.Models;
+using System.Data;
 
 namespace MKIdentityServer.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
+    [Authoriz]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -21,6 +24,7 @@ namespace MKIdentityServer.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
+        [Authoriz(UserRoles.Guest)]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MKIdentityServer.Helpers;
 using MKIdentityServer.Identity.Models;
 using MKIdentityServer.Identity.Services;
@@ -16,6 +17,7 @@ namespace MKIdentityServer.Controllers
         }
         [Route("Token")]
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Token([FromBody]AuthDto authDto)
         {          
             var user = await _authHandler.GetAuthorizedUser(authDto);

@@ -11,5 +11,6 @@ namespace MKIdentityServer.Context
         void AddUser(User user);
         void AddAuth(Auth auth);
         void AddAsGuestUser(User sbUser);
+        User? GetUserByToken(string token);
     }
 }
