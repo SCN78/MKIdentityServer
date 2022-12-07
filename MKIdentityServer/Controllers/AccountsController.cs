@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication.OAuth;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MKIdentityServer.Helpers;
+using MKIdentityServer.Identity.Services;
 using MKIdentityServer.Models;
 
 namespace MKIdentityServer.Controllers
@@ -10,8 +9,8 @@ namespace MKIdentityServer.Controllers
     [ApiController]
     public class AccountsController : ControllerBase
     {
-        private readonly IAuthHandler _authHandler;
-        public AccountsController(IAuthHandler authHandler)
+        private readonly IAuthService _authHandler;
+        public AccountsController(IAuthService authHandler)
         {
             _authHandler = authHandler;
         }
@@ -19,7 +18,7 @@ namespace MKIdentityServer.Controllers
         [HttpPost]
         public async Task<IActionResult> Token([FromBody]AuthDto authDto)
         {          
-            var user = await _authHandler.GetUser(authDto);
+            var user = await _authHandler.GetAuthorizedUser(authDto);
             if (user == null)
             {
                 return Unauthorized("Invalid User");
