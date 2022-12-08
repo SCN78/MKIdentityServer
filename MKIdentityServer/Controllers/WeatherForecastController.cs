@@ -24,7 +24,7 @@ namespace MKIdentityServer.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        [Authoriz(UserRoles.Guest)]
+        [Authoriz(UserRoles.User)]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

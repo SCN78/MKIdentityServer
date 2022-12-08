@@ -13,7 +13,7 @@ namespace MKIdentityServer.Identity.Helpers
 
         public AuthorizAttribute(params UserRoles[] roles)
         {
-            _roles = roles ?? new UserRoles[] { };
+            _roles = roles;
         }
 
         public void OnAuthorization(AuthorizationFilterContext context)
@@ -25,7 +25,7 @@ namespace MKIdentityServer.Identity.Helpers
 
             // authorization
             var user = (User)context.HttpContext.Items["User"];
-            if (user == null || (_roles.Any() && !_roles.Contains(user.Role)))
+            if (user == null || (_roles.Any() && (int)user.Role < (int)_roles.ToList()[0]))
             {
                 // not logged in or role not authorized
                 context.Result = new JsonResult(new { message = "Unauthorized" }) { StatusCode = StatusCodes.Status401Unauthorized };

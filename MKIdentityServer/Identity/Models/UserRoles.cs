@@ -2,9 +2,9 @@
 {
     public enum UserRoles
     {
-        SuperAdmin,
-        Admin,
-        AUser,
-        Guest
+        SuperAdmin = 100,
+        Admin = 90,
+        User = 80,
+        Guest = 10
     }
 }
